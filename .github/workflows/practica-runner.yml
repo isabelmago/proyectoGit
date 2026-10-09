@@ -1,0 +1,20 @@
+```yaml
+name: Práctica Runner
+
+on:
+  workflow_dispatch:
+
+jobs:
+  comprobar-runner:
+    runs-on: [self-hosted, Windows, X64, practicas]
+
+    steps:
+      - name: Mostrar mensaje
+        run: echo "¡Mi runner funciona!"
+
+      - name: Mostrar equipo
+        run: hostname
+
+      - name: Mostrar usuario
+        run: whoami
+```
